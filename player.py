@@ -4,6 +4,6 @@ class Player:
     def __init__(self):
         pass
 
-    def get_inputs(self):
+    def current_card(self):
         """Gets the assigned card"""
         self.card.current_card
