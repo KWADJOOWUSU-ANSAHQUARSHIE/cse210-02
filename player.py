@@ -6,4 +6,4 @@ class Player:
 
     def get_inputs(self):
         """Gets the assigned card"""
-        self.cards.current_card
+        self.card.current_card
