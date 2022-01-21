@@ -10,7 +10,8 @@ class Cards:
         """Card will choose a random number from 1-13."""
         self.card_number1 = random.randint(1, 13)
         
-    
+    """Just some ideas below on what we could utilize anywhere in the code 
+    whether here or on player.py -Joseph"""
     def highpoints(self):
         """Points will adjust based comparison to the current card"""
         if self.next_card > self.current_card:
