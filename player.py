@@ -9,7 +9,7 @@ class Player:
     def start_gameg(self):    
         """while loop to cycle through future game stuff"""
         while self.rounds:
-            pass
+            self.current_card()
 
     def current_card(self):
         """Gets the assigned card"""
