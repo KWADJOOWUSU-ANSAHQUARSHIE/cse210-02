@@ -1,2 +1,4 @@
-from cards import Cards
-from player import Player
+from player import *
+
+play = Player()
+play.start_game()
