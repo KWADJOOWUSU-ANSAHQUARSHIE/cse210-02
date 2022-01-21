@@ -13,7 +13,7 @@ class Cards:
     """Just some ideas below on what we could utilize anywhere in the code 
     whether here or on player.py -Joseph"""
     def highpoints(self):
-        """Points will adjust based comparison to the current card"""
+        """Points will adjust based comparison to the current card -Joseph"""
         if self.next_card > self.current_card:
             return +100
         elif self.next_card < self.current_card:
@@ -21,7 +21,7 @@ class Cards:
 
 
     def lowpoints(self):
-        """Points will adjust based comparison to the current card"""
+        """Points will adjust based comparison to the current card-Joseph"""
         if self.next_card < self.current_card:
             return self.pointstotal + 100
         elif self.next_card > self.current_card:
