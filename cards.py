@@ -8,7 +8,7 @@ class Cards:
 
     def card(self):
         """Card will choose a random number from 1-13."""
-        self.card_number1 = random.randint(1, 13)
+        self.current_card = random.randint(1, 13)
         
     """Just some ideas below on what we could utilize anywhere in the code 
     whether here or on player.py -Joseph"""
