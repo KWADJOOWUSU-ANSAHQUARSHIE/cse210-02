@@ -39,27 +39,50 @@ class Player:
         self.current = card.draw
         print(f"You are holding a {self.current}")
         self.guess=input("Will the next card be higher or lower? (h/l): ")
-
+        self.check_guess()
 
     def make_guess(self):
         # Use this function to display the current card and ask the user for the guess.
         # This function goes inside the while loop.
-        pass
+        print()
+        print(f"You are holding a {self.next}")
+        self.guess=input("Will the next card be higher or lower? (h/l): ")
+        self.check_guess()
 
     def check_guess(self):
         # Draw a card for self.next and check if the guess is correct or not.
-        pass
+        card = Cards()
+        card.draw_card()
+        self.next = card.draw
+
+        if self.next >= self.current:
+            answer = "higher"
+        elif self.next <= self.current:
+            answer = "lower"
+
+        if self.guess == "h" and answer == "higher":
+            self.score += 100
+        elif self.guess == "l" and answer == "lower":
+            self.score += 100
+        elif self.guess == "h" and answer == "lower":
+            self.score -= 75
+        elif self.guess == "l" and answer == "higher":
+            self.score -= 75
+        
+        print(f"The next card was a {self.next}")
+        self.display_output()
+        self.keep_playing()
 
     def display_output(self):
         # Display the score after the guess and if score < 0, self.is_playing = False to end game.
         # If game continues, make the change self.current = self.next.
         # Then, draw a new card in self.next.
         if self.score > 0:
-            print(f"Your current score it {self.score}")
-            self.current = self.next
-            card = Cards()
-            card.draw_card()
-            self.next = card.draw
+            print(f"Your current score is {self.score}")
+            # self.current = self.next
+            # card = Cards()
+            # card.draw_card()
+            # self.next = card.draw
 
         elif self.score <= 0:
             self.is_playing = False
@@ -69,9 +92,16 @@ class Player:
     def keep_playing(self):
         
         # Depending of the answer, change self.is_playing to False to end loop.
-        play_more = input("Would you like to keep playing (yes or no)?: ")
-        if play_more == "yes":
-            self.is_playing = True
-        elif play_more == "no":
-            self.is_playing = False
-            print("Thanks for Playing :)")
+        play_more = None
+        while play_more not in ("yes", "no"): 
+            
+            play_more = input("Would you like to keep playing (yes or no)?: ")
+            if play_more == "yes":
+                self.is_playing = True
+                self.make_guess()
+            elif play_more == "no":
+                print("Thanks for Playing :)")
+                self.is_playing = False
+            else: 
+                print("Please enter yes or no.")
+    
