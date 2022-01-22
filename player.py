@@ -32,9 +32,8 @@ class Player:
         # The reason being is that later we need to make self.current = self.next and after that
         # we change self.next to a new card. If we define the first self.current inside the while
         # loop, the self.current = self.next will be overwritten every time the while loop starts again.
-        card = draw_card()
         print("Welcome player!")
-        self.current = card.draw_card()
+        self.current = self.cards.draw_card()
         print(f"You are holding a {self.current}")
         self.guess=input("Will the next card be higher or lower? (h/l): ")
 
