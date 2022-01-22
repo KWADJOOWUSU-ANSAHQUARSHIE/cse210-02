@@ -21,7 +21,9 @@ class Player:
 
     def start_game(self):
         # Call the first_guess function, then write the while loop.
-        pass
+        self.first_guess()
+        while self.is_playing:
+            self.make_guess()
 
     def first_guess(self):
         # Use this function to draw and display the first current card and ask the user for the guess.
@@ -30,7 +32,12 @@ class Player:
         # The reason being is that later we need to make self.current = self.next and after that
         # we change self.next to a new card. If we define the first self.current inside the while
         # loop, the self.current = self.next will be overwritten every time the while loop starts again.
-        pass
+        card = draw_card()
+        print("Welcome player!")
+        self.current = card.draw_card()
+        print(f"You are holding a {self.current}")
+        self.guess=input("Will the next card be higher or lower? (h/l): ")
+
 
     def make_guess(self):
         # Use this function to display the current card and ask the user for the guess.
