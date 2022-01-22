@@ -54,9 +54,24 @@ class Player:
         # Display the score after the guess and if score < 0, self.is_playing = False to end game.
         # If game continues, make the change self.current = self.next.
         # Then, draw a new card in self.next.
-        pass
+        if self.score > 0:
+            print(f"Your current score it {self.score}")
+            self.current = self.next
+            card = Cards()
+            card.draw_card()
+            self.next = card.draw
+
+        elif self.score <= 0:
+            self.is_playing = False
+            print("Sorry you lost, try again next time")
+            
 
     def keep_playing(self):
-        # Ask user if they want to continue playing.
+        
         # Depending of the answer, change self.is_playing to False to end loop.
-        pass
+        play_more = input("Would you like to keep playing (yes or no)?: ")
+        if play_more == "yes":
+            self.is_playing = True
+        elif play_more == "no":
+            self.is_playing = False
+            print("Thanks for Playing :)")
