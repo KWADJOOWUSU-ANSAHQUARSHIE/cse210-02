@@ -1,9 +1,5 @@
 import random
 
-# To make things simpler, the Cards class just draws a random card.
-# We can make two variables in Player called current and next using the
-# the same Cards class.
-
 
 class Cards:
 
