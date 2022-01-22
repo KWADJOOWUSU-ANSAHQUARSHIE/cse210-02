@@ -12,7 +12,7 @@ class Player:
         self.guess = ''
 
         # Make an instance of the class Cards so we can use it whenever we want.
-        self.cards = Cards()
+        card = Cards()
 
         # Two different variables we can use to draw cards using the instance created above.
         # We draw current first and then we draw next to compare.
@@ -24,6 +24,7 @@ class Player:
         self.first_guess()
         while self.is_playing:
             self.make_guess()
+            self.is_playing
 
     def first_guess(self):
         # Use this function to draw and display the first current card and ask the user for the guess.
@@ -33,7 +34,9 @@ class Player:
         # we change self.next to a new card. If we define the first self.current inside the while
         # loop, the self.current = self.next will be overwritten every time the while loop starts again.
         print("Welcome player!")
-        self.current = self.cards.draw_card()
+        card = Cards()
+        card.draw_card()
+        self.current = card.draw
         print(f"You are holding a {self.current}")
         self.guess=input("Will the next card be higher or lower? (h/l): ")
 
