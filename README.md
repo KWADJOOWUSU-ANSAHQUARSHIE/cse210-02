@@ -1,7 +1,5 @@
-# cse210-02
-""" Here's what I wrote for the README file. I wont be offened if you want to change something or find mistakes --Erin"""
 # Hilo
-How good is your guess? Play Hilo and you might be surprised. The rules are simple. You start with 300 points. Look at your card and guess if the next card will be a higher number or a lower number. If you guess right you earn 100 points. If you guess wrong you loose 75 points.  If you loose all your points the game is over. If you have more than zero points you can always choose to keep playing! Will you press your luck?
+How good is your guess? Play Hilo and you might be surprised. The rules are simple. You start with 300 points. Look at your card and guess if the next card will be a higher number or a lower number. If you guess right you earn 100 points. If you guess wrong you lose 75 points.  If you lose all of your points the game is over. If you have more than zero points you can always choose to keep playing! Will you try your luck?
 
 ## Getting Started
 ---
@@ -18,10 +16,11 @@ project folder. Select the main module inside the cse210-02 folder and click the
 The project files and folders are organized as follows:
 ```
 root                  (project root folder)
-    +-- cards.py          (specific class)
-    +-- game.py           (source code for game and player class)
-    +-- __main__.py       (program entry point)
-    +-- README.md         (general info)
++-- game              (source code for game)
+    +-- cards.py      (Cards class)
+    +-- game.py       (Player class)
++-- __main__.py       (program entry point)
++-- README.md         (general info)
 ```
 
 ## Required Technologies
