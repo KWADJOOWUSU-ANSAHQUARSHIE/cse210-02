@@ -33,7 +33,11 @@ class Player:
         # The reason being is that later we need to make self.current = self.next and after that
         # we change self.next to a new card. If we define the first self.current inside the while
         # loop, the self.current = self.next will be overwritten every time the while loop starts again.
+        print()
         print("Welcome player!")
+        print()
+        print("Your current score is 300 points. Based on your guess you will loose points or earn points. When you reach 0 the game will be over.")
+        print()
         card = Cards()
         card.draw_card()
         self.current = card.draw
