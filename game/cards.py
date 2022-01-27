@@ -17,12 +17,12 @@ class Cards:
         Args:
             self (Cards): an instance of Cards.
         """
-        self.draw = 0
-
-    def draw_card(self):
-        """Randomly draws a card from the range of 1 to 13.
-
-        Args:
-            self (Cards): an instance of Cards.
-        """
         self.draw = random.randint(1, 13)
+
+    # def draw_card(self):
+    #     """Randomly draws a card from the range of 1 to 13.
+
+    #     Args:
+    #         self (Cards): an instance of Cards.
+    #     """
+    #     self.draw = random.randint(1, 13)

@@ -64,7 +64,7 @@ class Player:
         print("If the card is the same, you will automatically earn 100 points.")
         print("When you reach 0, the game will be over.\n")
 
-        self.card.draw_card()
+        self.card.draw
         self.current = self.card.draw
 
         print(f"You are holding a {self.current}.")
@@ -85,10 +85,10 @@ class Player:
         Args:
             self (Player): an instance of Player.
         """
-        self.card.draw_card()
+        self.card.draw
         self.next = self.card.draw
 
-        if self.deck.high and self.guess == 'h':
+        if self.card and self.guess == 'h':
             self.score += 100
         
         else:
@@ -111,7 +111,7 @@ class Player:
             print(f"Your current score is {self.score}")
 
             self.current = self.next
-            self.card.draw_card()
+            self.card.draw
             self.next = self.card.draw
 
     def keep_playing(self):
@@ -122,7 +122,7 @@ class Player:
         """
         play_more = input("Would you like to keep playing? [yes/no] ")
 
-        if play_more == "yes":
+        if play_more == "yes":  
             print()
         elif play_more == "no":
             print("\nThanks for Playing :)\n")
