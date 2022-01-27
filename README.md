@@ -29,4 +29,11 @@ root                  (project root folder)
 
 ## Authors
 ---
-* TEAM H: Joseph Mackenzie, Cooper Cook, Bryan Jackson, Seth Godoy, Erin Engler, Kwadjo Quarshie, Jeremy Shelby
+TEAM H: 
+* Joseph Mackenzie - techncrypt@gmail.com
+* Cooper Cook - coppercook7@byui.edu
+* Bryan Jackson - bryanandaimee@byui.edu
+* Seth Godoy - sethisaias.gc@gmail.com
+* Erin Engler - eng20015@byui.edu
+* Kwadjo Quarshie - qua21016@byui.edu
+* Jeremy Shelby - jeremy_shelby@hotmail.com
