@@ -61,10 +61,8 @@ class Player:
         print("Welcome player!\n")
         print("Your current score is 300 points.")
         print("Based on your guess you will lose points or earn points.")
-        print("If the card is the same, you will automatically earn 100 points.")
         print("When you reach 0, the game will be over.\n")
 
-        self.card.draw_card()
         self.current = self.card.draw
 
         print(f"You are holding a {self.current}.")
@@ -80,7 +78,7 @@ class Player:
         self.guess = input("Will the next card be higher or lower? (h/l): ")
 
     def check_guess(self):
-        """Draw the next card and check if the guess is correct.
+        """Draw the next card, check if the guess is correct, and change the score.
 
         Args:
             self (Player): an instance of Player.
@@ -88,11 +86,23 @@ class Player:
         self.card.draw_card()
         self.next = self.card.draw
 
-        if self.deck.high and self.guess == 'h':
-            self.score += 100
-        
+        if self.guess == "h":
+            if self.current > self.next:
+                self.score -= 75
+            else:
+                self.score += 100
+
+        elif self.guess == "l":
+            if self.current < self.next:
+                self.score -= 75
+            else:
+                self.score += 100
+
         else:
-            self.score -= 75
+            print()
+            print("Entered an invalid input.\nThe game is over.")
+            print("Follow the rules next time >:(\n")
+            self.is_playing = False
 
     def display_output(self):
         """Display the results of the guess. End the game if the score is 0.

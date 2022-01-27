@@ -17,12 +17,16 @@ class Cards:
         Args:
             self (Cards): an instance of Cards.
         """
-        self.draw = 0
+        self.draw = random.randint(1, 13)
 
     def draw_card(self):
-        """Randomly draws a card from the range of 1 to 13.
+        """Changes the value of the card. The value of the new card won't be
+        the same as the last one. 
 
         Args:
             self (Cards): an instance of Cards.
         """
-        self.draw = random.randint(1, 13)
+        pseudo_draw = random.randint(1, 13)
+        while pseudo_draw == self.draw:
+            pseudo_draw = random.randint(1, 13)
+        self.draw = pseudo_draw
