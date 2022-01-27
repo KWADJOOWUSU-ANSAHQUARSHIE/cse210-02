@@ -88,23 +88,11 @@ class Player:
         self.card.draw_card()
         self.next = self.card.draw
 
-        if self.guess == "h":
-            if self.current > self.next:
-                self.score -= 75
-            else:
-                self.score += 100
-
-        elif self.guess == "l":
-            if self.current < self.next:
-                self.score -= 75
-            else:
-                self.score += 100
-
+        if self.deck.high and self.guess == 'h':
+            self.score += 100
+        
         else:
-            print()
-            print("Entered an invalid input.\nThe game is over.")
-            print("Follow the rules next time >:(\n")
-            self.is_playing = False
+            self.score -= 75
 
     def display_output(self):
         """Display the results of the guess. End the game if the score is 0.
