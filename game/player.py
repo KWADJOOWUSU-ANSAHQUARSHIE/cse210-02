@@ -64,8 +64,12 @@ class Player:
         print("When you reach 0, the game will be over.\n")
 
         self.current = self.card.draw
+        
+        if (self.current == 11) or (self.current ==8):#Grammar police to the rescue!
+            print(f"You are holding an {self.current}.")
+        else:
+            print(f"You are holding a {self.current}.")
 
-        print(f"You are holding a {self.current}.")
         self.guess = input("Will the next card be higher or lower? (h/l): ")
 
     def make_guess(self):
@@ -74,7 +78,11 @@ class Player:
         Args:
             self (Player): an instance of Player.
         """
-        print(f"You are holding a {self.current}.")
+        if (self.current == 11) or (self.current ==8): #Grammar police to the rescue!
+            print(f"You are holding an {self.current}.")
+        else:
+            print(f"You are holding a {self.current}.")
+
         self.guess = input("Will the next card be higher or lower? (h/l): ")
 
     def check_guess(self):
@@ -110,7 +118,11 @@ class Player:
         Args:
             self (Player): an instance of Player.
         """
-        print(f"The next card was a {self.next}.")
+        if (self.next == 11) or (self.next ==8): #Grammar police to the rescue!
+            print(f"The next card was an {self.next}.")
+        else:
+            print(f"The next card was a {self.next}.")
+        
 
         if self.score <= 0:
             print(f"Your current score is {self.score}.\n")
