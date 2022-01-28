@@ -26,3 +26,4 @@ class Cards:
             self (Cards): an instance of Cards.
         """
         self.draw = random.randint(1, 13)
+        
