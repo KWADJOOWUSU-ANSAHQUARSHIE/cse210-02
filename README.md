@@ -5,8 +5,9 @@ How good is your guess? Play Hilo and you might be surprised. The rules are simp
 Make sure you have Python 3.8.0 or newer installed and running on your machine. Open a terminal and 
 browse to the project's root folder. Start the program by running the following command.
 ```
-python3 __main__ 
+python3 __main__.py 
 ```
+If the command python3 doesn't work, try just python. 
 You can also run the program from an IDE like Visual Studio Code. Start your IDE and open the 
 project folder. Select the main module inside the cse210-02 folder and click the "run" button.
 ## Project Structure
