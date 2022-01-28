@@ -15,6 +15,7 @@ class Player:
         current (int): the current card displayed
         next (int): the next card to draw
     """
+
     def __init__(self):
         """Constructs a new Player.
 
@@ -27,7 +28,7 @@ class Player:
         self.current = None
         self.next = None
 
-        self.card = Cards() #Make an instance of the class Cards() 
+        self.card = Cards()  # Make an instance of the class Cards()
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -60,11 +61,11 @@ class Player:
         print("Your current score is 300 points.")
         print("Based on your guess you will lose points or earn points.")
         print("When you reach 0, the game will be over.\n")
-        
-        self.card.draw_card()#Get the first number
+
+        self.card.draw_card()  # Get the first number
         self.current = self.card.draw
-        
-        if (self.current == 11) or (self.current ==8):#Grammar police to the rescue!
+
+        if (self.current == 11) or (self.current == 8):  # Grammar police to the rescue!
             print(f"You are holding an {self.current}.")
         else:
             print(f"You are holding a {self.current}.")
@@ -77,7 +78,7 @@ class Player:
         Args:
             self (Player): an instance of Player.
         """
-        if (self.current == 11) or (self.current ==8): #Grammar police to the rescue!
+        if (self.current == 11) or (self.current == 8):  # Grammar police to the rescue!
             print(f"You are holding an {self.current}.")
         else:
             print(f"You are holding a {self.current}.")
@@ -111,19 +112,16 @@ class Player:
             print("Follow the rules next time >:(\n")
             self.is_playing = False
 
-
-
     def display_output(self):
         """Display the results of the guess. End the game if the score is 0.
 
         Args:
             self (Player): an instance of Player.
         """
-        if (self.next == 11) or (self.next ==8): #Grammar police to the rescue!
+        if (self.next == 11) or (self.next == 8):  # Grammar police to the rescue!
             print(f"The next card was an {self.next}.")
         else:
             print(f"The next card was a {self.next}.")
-        
 
         if self.score <= 0:
             print(f"Your current score is {self.score}.\n")
@@ -140,11 +138,11 @@ class Player:
         Args:
             self (Player): an instance of Player.
         """
-        play_more = input("Would you like to keep playing? [yes/no] ")
+        play_more = input("Would you like to keep playing? [y/n] ")
 
-        if play_more.capitalize() == "Y" or play_more.capitalize() == "YES":
+        if play_more.lower() == "y" or play_more.lower() == "yes":
             print()
-        elif play_more.capitalize() == "N" or play_more.capitalize() == "NO":
+        elif play_more.lower() == "n" or play_more.lower() == "no":
             print("\nThanks for Playing :)\n")
             self.is_playing = False
         else:
