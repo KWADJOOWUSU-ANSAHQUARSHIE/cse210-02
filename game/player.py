@@ -132,7 +132,7 @@ class Player:
         """
         play_more = input("Would you like to keep playing? [yes/no] ")
 
-        if play_more.capitalize() == "Y" or play_more.capitalize() == "Yes":
+        if play_more.capitalize() == "Y" or play_more.capitalize() == "YES":
             print()
         elif play_more.capitalize() == "N" or play_more.capitalize() == "NO":
             print("\nThanks for Playing :)\n")
