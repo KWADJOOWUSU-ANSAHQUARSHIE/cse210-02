@@ -17,7 +17,8 @@ class Cards:
         Args:
             self (Cards): an instance of Cards.
         """
-        self.draw = 0 
+        self.draw = None
+        self.draw_card()
 
     def draw_card(self):
         """Changes the value of the card. The value of the new card won't be
