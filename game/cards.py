@@ -17,7 +17,7 @@ class Cards:
         Args:
             self (Cards): an instance of Cards.
         """
-        self.draw = random.randint(1, 13)
+        self.draw = 0 
 
     def draw_card(self):
         """Changes the value of the card. The value of the new card won't be

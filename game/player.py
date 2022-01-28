@@ -15,7 +15,6 @@ class Player:
         current (int): the current card displayed
         next (int): the next card to draw
     """
-
     def __init__(self):
         """Constructs a new Player.
 
@@ -25,11 +24,10 @@ class Player:
         self.score = 300
         self.is_playing = True
         self.guess = ''
-
-        self.card = Cards()
-
         self.current = None
         self.next = None
+
+        self.card = Cards() #Make an instance of the class Cards() 
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -62,7 +60,8 @@ class Player:
         print("Your current score is 300 points.")
         print("Based on your guess you will lose points or earn points.")
         print("When you reach 0, the game will be over.\n")
-
+        
+        self.card.draw_card()#Get the first number
         self.current = self.card.draw
         
         if (self.current == 11) or (self.current ==8):#Grammar police to the rescue!
@@ -112,6 +111,8 @@ class Player:
             print("Follow the rules next time >:(\n")
             self.is_playing = False
 
+
+
     def display_output(self):
         """Display the results of the guess. End the game if the score is 0.
 
@@ -131,10 +132,7 @@ class Player:
 
         else:
             print(f"Your current score is {self.score}")
-
             self.current = self.next
-            self.card.draw_card()
-            self.next = self.card.draw
 
     def keep_playing(self):
         """Ask the user if the player if they want to keep playing.
