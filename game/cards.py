@@ -27,7 +27,5 @@ class Cards:
         Args:
             self (Cards): an instance of Cards.
         """
-        pseudo_draw = random.randint(1, 13)
-        while pseudo_draw == self.draw:
-            pseudo_draw = random.randint(1, 13)
-        self.draw = pseudo_draw
+        self.draw = random.randint(1, 13)
+        
